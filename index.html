@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember & Oak | Restaurant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- NAVIGATION BAR -->
+<header class="navbar">
+
+    <a href="#" class="logo">EMBER <span>&</span> OAK</a>
+
+    <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+    >
+        ☰
+    </button>
+
+    <nav class="nav-links" id="nav-links">
+        <a href="#">Home</a>
+        <a href="#menu">Our Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#cart" class="mobile-cart-link">
+            Cart (<span id="mobile-cart-count">0</span>)
+        </a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="#menu" class="nav-button">Explore Menu</a>
+
+        <button class="cart-button" id="cart-toggle">
+            Cart (<span id="cart-count">0</span>)
+        </button>
+    </div>
+
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-tagline">WELCOME TO EMBER & OAK</p>
+
+            <h1>Where Fire Meets <span>Flavour.</span></h1>
+
+            <p class="hero-description">
+                Discover unforgettable flavours, freshly prepared dishes,
+                and a dining experience made for every occasion.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="primary-button">Explore Our Menu</a>
+                <a href="#about" class="secondary-button">Our Story</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOD MENU SECTION -->
+    <section class="menu-section" id="menu">
+
+        <div class="section-heading">
+            <p class="section-tag">FRESH FROM OUR KITCHEN</p>
+            <h2>Explore Our <span>Menu</span></h2>
+            <p>
+                From sizzling favourites to irresistible classics,
+                discover something worth coming back for.
+            </p>
+        </div>
+
+        <div class="menu-grid">
+
+            <!-- FOOD 1 -->
+            <div class="food-card">
+                <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"
+                    alt="Grilled meat with fresh herbs"
+                >
+                <div class="food-info">
+                    <span class="food-category">CHEF'S SPECIAL</span>
+                    <h3>Signature Grilled Steak</h3>
+                    <p>Juicy grilled steak served with roasted vegetables.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦12,500</span>
+                        <button class="add-cart" data-name="Signature Grilled Steak" data-price="12500">Add to Cart +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOD 2 -->
+            <div class="food-card">
+                <img
+                    src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?auto=format&fit=crop&w=700&q=80"
+                    alt="Rice dish with vegetables"
+                >
+                <div class="food-info">
+                    <span class="food-category">AFRICAN FAVOURITE</span>
+                    <h3>Jollof Rice & Chicken</h3>
+                    <p>Richly seasoned rice with grilled chicken and plantain.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦4,500</span>
+                        <button class="add-cart" data-name="Jollof Rice & Chicken" data-price="4500">Add to Cart +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOD 3 -->
+            <div class="food-card">
+                <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"
+                    alt="Gourmet cheeseburger"
+                >
+                <div class="food-info">
+                    <span class="food-category">CUSTOMER FAVOURITE</span>
+                    <h3>Oakhouse Burger</h3>
+                    <p>A juicy beef burger with melted cheese and crispy fries.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦6,000</span>
+                        <button class="add-cart" data-name="Oakhouse Burger" data-price="6000">Add to Cart +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOD 4 -->
+            <div class="food-card">
+                <img
+                    src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=80"
+                    alt="Pasta with herbs"
+                >
+                <div class="food-info">
+                    <span class="food-category">ITALIAN CLASSIC</span>
+                    <h3>Creamy Herb Pasta</h3>
+                    <p>Silky pasta tossed in a creamy sauce with fresh herbs.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦7,500</span>
+                        <button class="add-cart" data-name="Creamy Herb Pasta" data-price="7500">Add to Cart +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOD 5 -->
+            <div class="food-card">
+                <img
+                    src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=80"
+                    alt="Grilled fish with vegetables"
+                >
+                <div class="food-info">
+                    <span class="food-category">FRESH & LIGHT</span>
+                    <h3>Grilled Fish Plate</h3>
+                    <p>Seasoned grilled fish served with fresh vegetables.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦9,500</span>
+                        <button class="add-cart" data-name="Grilled Fish Plate" data-price="9500">Add to Cart +</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOD 6 -->
+            <div class="food-card">
+                <img
+                    src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=700&q=80"
+                    alt="Chocolate dessert"
+                >
+                <div class="food-info">
+                    <span class="food-category">SWEET FINISH</span>
+                    <h3>Chocolate Dessert</h3>
+                    <p>A rich chocolate treat for the perfect ending.</p>
+                    <div class="food-bottom">
+                        <span class="food-price">₦3,500</span>
+                        <button class="add-cart" data-name="Chocolate Dessert" data-price="3500">Add to Cart +</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+<!-- SHOPPING CART -->
+<section class="cart-section" id="cart">
+    <div class="cart-container">
+
+        <div class="cart-heading">
+            <p class="section-tag">YOUR ORDER</p>
+            <h2>Your Shopping <span>Cart</span></h2>
+        </div>
+
+        <div id="cart-items">
+            <p class="empty-cart">Your cart is empty. Add something delicious!</p>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Total: <span id="cart-total">₦0</span></h3>
+            <button id="clear-cart" class="clear-button">Clear Cart</button>
+            <button id="checkout-button" class="checkout-button">
+                Proceed to Checkout
+            </button>
+        </div>
+
+        <p id="cart-message" class="cart-message" aria-live="polite"></p>
+
+    </div>
+</section>
+
+
+<!-- ABOUT US SECTION -->
+<section class="about-section" id="about">
+
+    <div class="about-image">
+        <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+            alt="Elegant restaurant dining table"
+        >
+    </div>
+
+    <div class="about-content">
+        <p class="section-tag">OUR STORY</p>
+
+        <h2>Good Food. <span>Great Company.</span></h2>
+
+        <p>
+            At Ember & Oak, we believe great food brings people together.
+            Our kitchen combines bold flavours, fresh ingredients,
+            and a passion for creating memorable dining experiences.
+        </p>
+
+        <p>
+            From comforting classics to exciting international dishes,
+            every meal is an opportunity to discover something special.
+            Whether you're joining us for a quick lunch or a special
+            evening, there's always a place for you at our table.
+        </p>
+
+        <a href="#menu" class="primary-button">Discover Our Menu</a>
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US SECTION -->
+<section class="features-section">
+
+    <div class="section-heading">
+        <p class="section-tag">THE EMBER & OAK EXPERIENCE</p>
+        <h2>Why Dine <span>With Us?</span></h2>
+        <p>Thoughtful cooking, welcoming service, and flavour in every bite.</p>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>Fresh Ingredients</h3>
+            <p>Quality ingredients and carefully prepared dishes in every order.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">♨</div>
+            <h3>Bold Flavours</h3>
+            <p>A diverse menu inspired by beloved classics and global cuisine.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">♡</div>
+            <h3>Made With Care</h3>
+            <p>Every meal is prepared with attention to flavour and presentation.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+
+    <div class="section-heading">
+        <p class="section-tag">WE'D LOVE TO HEAR FROM YOU</p>
+        <h2>Let's <span>Connect.</span></h2>
+        <p>Have a question about our menu or your next visit? Get in touch.</p>
+    </div>
+
+    <div class="contact-details">
+
+        <div class="contact-card">
+            <h3>Visit Us</h3>
+            <p>123 Oak Avenue, Your City</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Call Us</h3>
+            <p>+234 800 000 0000</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>Email Us</h3>
+            <p>hello@emberandoak.example</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <a href="#" class="logo">EMBER <span>&</span> OAK</a>
+
+    <p>Bold Flavours. Unforgettable Moments.</p>
+
+    <p class="copyright">
+        &copy; 2026 Ember & Oak. Portfolio demonstration.
+    </p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
